@@ -1,0 +1,47 @@
+buildscript {
+    ext.kotlin_version = '1.7.10'
+    repositories {
+        // 使用阿里云镜像
+//        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+//        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
+//        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
+//        maven { url 'https://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
+//        maven { url "https://mvn.gt.getui.com/nexus/content/repositories/releases/" }
+        google()
+        mavenCentral()
+//        maven { url 'https://maven.aliyun.com/repository/google' }
+//        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+//        // 使用阿里云镜像
+//        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+//        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
+//        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
+//        maven { url 'https://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
+//        maven { url "https://mvn.gt.getui.com/nexus/content/repositories/releases/" }
+        google()
+        mavenCentral()
+//        maven { url 'https://maven.aliyun.com/repository/google' }
+//        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

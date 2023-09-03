@@ -1,0 +1,100 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+def keystorePropertiesFile = rootProject.file("key.properties")
+def keystoreProperties = new Properties()
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+// 生成构建时间-使用 GMT+08:00 时区
+static def buildTime() {
+    return new Date().format("YYMMddHHmm", TimeZone.getTimeZone("GMT+08:00"))
+}
+
+android {
+    namespace "com.aptx4869.kaibo.kaibo"
+    compileSdkVersion flutter.compileSdkVersion
+    ndkVersion flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId "com.aptx4869.kaibo.kaibo"
+        // You can update the following values to match your application needs.
+        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
+        minSdkVersion flutter.minSdkVersion
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //        archivesBaseName = "Kaibo_" + versionName + "_" + versionCode + "_" + buildTime()
+        }
+    }
+
+    // 自定义打包名称 - 路径在/build/app/outputs/apk/release
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            // 定义自定义的APK文件名，包括APP名称、版本代码和时间戳
+            outputFileName = "Kaibo_${variant.versionName}(${variant.versionCode})_${variant.buildType.name}_${buildTime()}.apk"
+        }
+    }
+
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {}

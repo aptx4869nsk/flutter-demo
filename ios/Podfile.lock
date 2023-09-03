@@ -1,0 +1,139 @@
+PODS:
+  - app_installer (1.1.0):
+    - Flutter
+  - audio_session (0.0.1):
+    - Flutter
+  - device_info_plus (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+  - flutter_app_badger (1.3.0):
+    - Flutter
+  - flutter_image_compress_common (1.0.0):
+    - Flutter
+    - Mantle
+    - SDWebImage
+    - SDWebImageWebPCoder
+  - flutter_inappwebview (0.0.1):
+    - Flutter
+    - flutter_inappwebview/Core (= 0.0.1)
+    - OrderedSet (~> 5.0)
+  - flutter_inappwebview/Core (0.0.1):
+    - Flutter
+    - OrderedSet (~> 5.0)
+  - flutter_local_notifications (0.0.1):
+    - Flutter
+  - flutter_native_splash (0.0.1):
+    - Flutter
+  - just_audio (0.0.1):
+    - Flutter
+  - libwebp (1.3.1):
+    - libwebp/demux (= 1.3.1)
+    - libwebp/mux (= 1.3.1)
+    - libwebp/sharpyuv (= 1.3.1)
+    - libwebp/webp (= 1.3.1)
+  - libwebp/demux (1.3.1):
+    - libwebp/webp
+  - libwebp/mux (1.3.1):
+    - libwebp/demux
+  - libwebp/sharpyuv (1.3.1)
+  - libwebp/webp (1.3.1):
+    - libwebp/sharpyuv
+  - Mantle (2.2.0):
+    - Mantle/extobjc (= 2.2.0)
+  - Mantle/extobjc (2.2.0)
+  - OrderedSet (5.0.0)
+  - package_info_plus (0.4.5):
+    - Flutter
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - permission_handler_apple (9.1.1):
+    - Flutter
+  - SDWebImage (5.17.0):
+    - SDWebImage/Core (= 5.17.0)
+  - SDWebImage/Core (5.17.0)
+  - SDWebImageWebPCoder (0.13.0):
+    - libwebp (~> 1.0)
+    - SDWebImage/Core (~> 5.17)
+  - shared_preferences_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+
+DEPENDENCIES:
+  - app_installer (from `.symlinks/plugins/app_installer/ios`)
+  - audio_session (from `.symlinks/plugins/audio_session/ios`)
+  - device_info_plus (from `.symlinks/plugins/device_info_plus/ios`)
+  - Flutter (from `Flutter`)
+  - flutter_app_badger (from `.symlinks/plugins/flutter_app_badger/ios`)
+  - flutter_image_compress_common (from `.symlinks/plugins/flutter_image_compress_common/ios`)
+  - flutter_inappwebview (from `.symlinks/plugins/flutter_inappwebview/ios`)
+  - flutter_local_notifications (from `.symlinks/plugins/flutter_local_notifications/ios`)
+  - flutter_native_splash (from `.symlinks/plugins/flutter_native_splash/ios`)
+  - just_audio (from `.symlinks/plugins/just_audio/ios`)
+  - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
+  - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
+  - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
+
+SPEC REPOS:
+  trunk:
+    - libwebp
+    - Mantle
+    - OrderedSet
+    - SDWebImage
+    - SDWebImageWebPCoder
+
+EXTERNAL SOURCES:
+  app_installer:
+    :path: ".symlinks/plugins/app_installer/ios"
+  audio_session:
+    :path: ".symlinks/plugins/audio_session/ios"
+  device_info_plus:
+    :path: ".symlinks/plugins/device_info_plus/ios"
+  Flutter:
+    :path: Flutter
+  flutter_app_badger:
+    :path: ".symlinks/plugins/flutter_app_badger/ios"
+  flutter_image_compress_common:
+    :path: ".symlinks/plugins/flutter_image_compress_common/ios"
+  flutter_inappwebview:
+    :path: ".symlinks/plugins/flutter_inappwebview/ios"
+  flutter_local_notifications:
+    :path: ".symlinks/plugins/flutter_local_notifications/ios"
+  flutter_native_splash:
+    :path: ".symlinks/plugins/flutter_native_splash/ios"
+  just_audio:
+    :path: ".symlinks/plugins/just_audio/ios"
+  package_info_plus:
+    :path: ".symlinks/plugins/package_info_plus/ios"
+  path_provider_foundation:
+    :path: ".symlinks/plugins/path_provider_foundation/darwin"
+  permission_handler_apple:
+    :path: ".symlinks/plugins/permission_handler_apple/ios"
+  shared_preferences_foundation:
+    :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
+
+SPEC CHECKSUMS:
+  app_installer: 4301996bd8f3c6f75776416b8885a6d92928306f
+  audio_session: 4f3e461722055d21515cf3261b64c973c062f345
+  device_info_plus: 7545d84d8d1b896cb16a4ff98c19f07ec4b298ea
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  flutter_app_badger: b87fc231847b03b92ce1412aa351842e7e97932f
+  flutter_image_compress_common: ec1d45c362c9d30a3f6a0426c297f47c52007e3e
+  flutter_inappwebview: bfd58618f49dc62f2676de690fc6dcda1d6c3721
+  flutter_local_notifications: 0c0b1ae97e741e1521e4c1629a459d04b9aec743
+  flutter_native_splash: 52501b97d1c0a5f898d687f1646226c1f93c56ef
+  just_audio: baa7252489dbcf47a4c7cc9ca663e9661c99aafa
+  libwebp: 33dc822fbbf4503668d09f7885bbfedc76c45e96
+  Mantle: c5aa8794a29a022dfbbfc9799af95f477a69b62d
+  OrderedSet: aaeb196f7fef5a9edf55d89760da9176ad40b93c
+  package_info_plus: fd030dabf36271f146f1f3beacd48f564b0f17f7
+  path_provider_foundation: 29f094ae23ebbca9d3d0cec13889cd9060c0e943
+  permission_handler_apple: e76247795d700c14ea09e3a2d8855d41ee80a2e6
+  SDWebImage: 750adf017a315a280c60fde706ab1e552a3ae4e9
+  SDWebImageWebPCoder: af09429398d99d524cae2fe00f6f0f6e491ed102
+  shared_preferences_foundation: 5b919d13b803cadd15ed2dc053125c68730e5126
+
+PODFILE CHECKSUM: 70d9d25280d0dd177a5f637cdb0f0b0b12c6a189
+
+COCOAPODS: 1.12.1
