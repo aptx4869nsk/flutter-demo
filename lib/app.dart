@@ -54,6 +54,6 @@ class InitBinding extends Bindings {
   void dependencies() {
     Get.put<PermissionController>(PermissionController());
     Get.put<AppController>(AppController());
-    Get.put<PushController>(PushController());
+    // Get.put<PushController>(PushController());
   }
 }

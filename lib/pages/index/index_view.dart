@@ -25,10 +25,10 @@ class IndexPage extends StatelessWidget {
           MinePage(),
         ],
       ),
-      bottomNavigationBar: BottomBar(
+      bottomNavigationBar: BottomNavBar(
         index: logic.index.value,
         items: [
-          BottomBarItem(
+          BottomNavBarItem(
             selectedImgRes: ImageStr.icNavHomeSel,
             unselectedImgRes: ImageStr.icNavHomeNor,
             label: Globe.home,
@@ -36,7 +36,7 @@ class IndexPage extends StatelessWidget {
             imgHeight: 28.h,
             onClick: logic.switchTab,
           ),
-          BottomBarItem(
+          BottomNavBarItem(
             selectedImgRes: ImageStr.icNavMineSel,
             unselectedImgRes: ImageStr.icNavMineNor,
             label: Globe.mine,

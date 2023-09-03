@@ -4,14 +4,14 @@ import 'package:kaibo/resources/styles.dart';
 import 'package:kaibo/utils/custom_ext.dart';
 import 'package:kaibo/views/badge_view.dart';
 
-class BottomBar extends StatelessWidget {
-  const BottomBar({
+class BottomNavBar extends StatelessWidget {
+  const BottomNavBar({
     Key? key,
     this.index = 0,
     required this.items,
   }) : super(key: key);
   final int index;
-  final List<BottomBarItem> items;
+  final List<BottomNavBarItem> items;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class BottomBar extends StatelessWidget {
     );
   }
 
-  Widget _buildItemView({required int i, required BottomBarItem item}) =>
+  Widget _buildItemView({required int i, required BottomNavBarItem item}) =>
       Expanded(
         child: Listener(
           onPointerDown: (_) {
@@ -79,7 +79,7 @@ class BottomBar extends StatelessWidget {
       );
 }
 
-class BottomBarItem {
+class BottomNavBarItem {
   final String selectedImgRes;
   final String unselectedImgRes;
   final String label;
@@ -92,7 +92,7 @@ class BottomBarItem {
   final Stream<int>? steam;
   final int? count;
 
-  BottomBarItem({
+  BottomNavBarItem({
     required this.selectedImgRes,
     required this.unselectedImgRes,
     required this.label,
