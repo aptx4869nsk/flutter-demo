@@ -1,16 +1,8 @@
 buildscript {
     ext.kotlin_version = '1.7.10'
     repositories {
-        // 使用阿里云镜像
-//        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
-//        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
-//        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
-//        maven { url 'https://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
-//        maven { url "https://mvn.gt.getui.com/nexus/content/repositories/releases/" }
         google()
         mavenCentral()
-//        maven { url 'https://maven.aliyun.com/repository/google' }
-//        maven { url 'https://maven.aliyun.com/repository/jcenter' }
     }
 
     dependencies {
@@ -21,16 +13,8 @@ buildscript {
 
 allprojects {
     repositories {
-//        // 使用阿里云镜像
-//        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
-//        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
-//        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
-//        maven { url 'https://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
-//        maven { url "https://mvn.gt.getui.com/nexus/content/repositories/releases/" }
         google()
         mavenCentral()
-//        maven { url 'https://maven.aliyun.com/repository/google' }
-//        maven { url 'https://maven.aliyun.com/repository/jcenter' }
     }
 }
 
