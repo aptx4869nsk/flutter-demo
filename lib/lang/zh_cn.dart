@@ -1,5 +1,5 @@
 const Map<String, String> zhCN = {
-  "welcome": "欢迎使用凯博",
+  "welcome": "欢迎使用အိခြူးစံ",
   // bottom-nav-bar
   "home": "首页",
   "mine": "我的",

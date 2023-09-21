@@ -1,9 +1,10 @@
 import 'package:flutter/animation.dart';
 import 'package:get/get.dart';
-import 'package:kaibo/routes/app_navigator.dart';
-import 'package:kaibo/utils/data_sp.dart';
+import 'package:mini_store/routes/app_navigator.dart';
+import 'package:mini_store/utils/data_sp.dart';
 
-class SplashLogic extends GetxController with GetSingleTickerProviderStateMixin{
+class SplashLogic extends GetxController
+    with GetSingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<double> animation;
 
@@ -16,8 +17,8 @@ class SplashLogic extends GetxController with GetSingleTickerProviderStateMixin{
   }
 
   animationInitialization() {
-    animationController =
-        AnimationController(vsync: this, duration: const Duration(microseconds: 100));
+    animationController = AnimationController(
+        vsync: this, duration: const Duration(microseconds: 100));
     animation =
         CurvedAnimation(parent: animationController, curve: Curves.easeOut)
             .obs
@@ -26,7 +27,7 @@ class SplashLogic extends GetxController with GetSingleTickerProviderStateMixin{
     animation.addStatusListener((AnimationStatus status) {
       if (status == AnimationStatus.completed) {
         var loginCertificate = DataSp.getLoginCertificate();
-        if(loginCertificate != null && loginCertificate.token.isNotEmpty) {
+        if (loginCertificate != null && loginCertificate.token.isNotEmpty) {
           AppNavigator.startMain();
         } else {
           AppNavigator.startLogin();
@@ -35,5 +36,4 @@ class SplashLogic extends GetxController with GetSingleTickerProviderStateMixin{
     });
     animationController.forward();
   }
-
 }

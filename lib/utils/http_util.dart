@@ -3,13 +3,12 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-import 'package:kaibo/config.dart';
-import 'package:kaibo/utils/logger.dart';
-import 'package:kaibo/utils/data_sp.dart';
-import 'package:kaibo/utils/app_utils.dart';
-import 'package:kaibo/models/api_resp.dart';
-import 'package:kaibo/widgets/app_widget.dart';
-
+import 'package:mini_store/config.dart';
+import 'package:mini_store/utils/logger.dart';
+import 'package:mini_store/utils/data_sp.dart';
+import 'package:mini_store/utils/app_utils.dart';
+import 'package:mini_store/models/api_resp.dart';
+import 'package:mini_store/widgets/app_widget.dart';
 
 var dio = Dio();
 

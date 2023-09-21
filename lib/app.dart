@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-import 'package:kaibo/resources/lang.dart';
-import 'package:kaibo/routes/app_pages.dart';
-import 'package:kaibo/utils/logger.dart';
-import 'package:kaibo/views/app_view.dart';
-import 'package:kaibo/controller/app_controller.dart';
-import 'package:kaibo/controller/push_controller.dart';
-import 'package:kaibo/controller/permission_controller.dart';
+import 'package:mini_store/resources/lang.dart';
+import 'package:mini_store/routes/app_pages.dart';
+import 'package:mini_store/utils/logger.dart';
+import 'package:mini_store/views/app_view.dart';
+import 'package:mini_store/controller/app_controller.dart';
+import 'package:mini_store/controller/push_controller.dart';
+import 'package:mini_store/controller/permission_controller.dart';
 
-class KaiboApp extends StatelessWidget {
-  const KaiboApp({Key? key}) : super(key: key);
+class mini_storeApp extends StatelessWidget {
+  const mini_storeApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

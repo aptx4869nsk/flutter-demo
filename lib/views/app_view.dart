@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:kaibo/config.dart';
-import 'package:kaibo/controller/app_controller.dart';
-import 'package:kaibo/utils/focus_detector.dart';
+import 'package:mini_store/config.dart';
+import 'package:mini_store/controller/app_controller.dart';
+import 'package:mini_store/utils/focus_detector.dart';
 
 class AppView extends StatelessWidget {
   const AppView({Key? key, required this.builder}) : super(key: key);
@@ -28,13 +28,13 @@ class AppView extends StatelessWidget {
   }
 
   static TransitionBuilder _builder() => EasyLoading.init(
-    builder: (context, widget) {
-      return MediaQuery(
-        data: MediaQuery.of(context).copyWith(
-          textScaleFactor: Config.textScaleFactor,
-        ),
-        child: widget!,
+        builder: (context, widget) {
+          return MediaQuery(
+            data: MediaQuery.of(context).copyWith(
+              textScaleFactor: Config.textScaleFactor,
+            ),
+            child: widget!,
+          );
+        },
       );
-    },
-  );
 }

@@ -6,11 +6,11 @@ import 'package:just_audio/just_audio.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:kaibo/utils/data_sp.dart';
-import 'package:kaibo/utils/logger.dart';
-import 'package:kaibo/utils/upgrade_manager.dart';
+import 'package:mini_store/utils/data_sp.dart';
+import 'package:mini_store/utils/logger.dart';
+import 'package:mini_store/utils/upgrade_manager.dart';
 
-class AppController extends GetxController with UpgradeManger{
+class AppController extends GetxController with UpgradeManger {
   var isRunningBackground = false;
   var backgroundSubject = PublishSubject<bool>();
   var isAppBadgeSupported = false;
@@ -18,30 +18,30 @@ class AppController extends GetxController with UpgradeManger{
   final flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
   final initializationSettingsAndroid =
-  const AndroidInitializationSettings('@mipmap/ic_launcher');
+      const AndroidInitializationSettings('@mipmap/ic_launcher');
 
   /// Note: permissions aren't requested here just to demonstrate that can be
   /// done later
   final DarwinInitializationSettings initializationSettingsDarwin =
-  DarwinInitializationSettings(
+      DarwinInitializationSettings(
     requestAlertPermission: false,
     requestBadgePermission: false,
     requestSoundPermission: false,
     onDidReceiveLocalNotification: (
-        int id,
-        String? title,
-        String? body,
-        String? payload,
-        ) async {},
+      int id,
+      String? title,
+      String? body,
+      String? payload,
+    ) async {},
   );
 
   final _ring = 'assets/audio/message_ring.wav';
   final _audioPlayer = AudioPlayer(
-    // Handle audio_session events ourselves for the purpose of this demo.
-    // handleInterruptions: false,
-    // androidApplyAudioAttributes: false,
-    // handleAudioSessionActivation: false,
-  );
+      // Handle audio_session events ourselves for the purpose of this demo.
+      // handleInterruptions: false,
+      // androidApplyAudioAttributes: false,
+      // handleAudioSessionActivation: false,
+      );
 
   late BaseDeviceInfo deviceInfo;
 
@@ -95,16 +95,16 @@ class AppController extends GetxController with UpgradeManger{
   void _requestPermissions() {
     flutterLocalNotificationsPlugin
         .resolvePlatformSpecificImplementation<
-        AndroidFlutterLocalNotificationsPlugin>()
+            AndroidFlutterLocalNotificationsPlugin>()
         ?.requestPermission();
     flutterLocalNotificationsPlugin
         .resolvePlatformSpecificImplementation<
-        IOSFlutterLocalNotificationsPlugin>()
+            IOSFlutterLocalNotificationsPlugin>()
         ?.requestPermissions(
-      alert: true,
-      badge: true,
-      sound: true,
-    );
+          alert: true,
+          badge: true,
+          sound: true,
+        );
   }
 
   // Future<void> showNotification(im.Message message) async {
@@ -168,9 +168,9 @@ class AppController extends GetxController with UpgradeManger{
 
     await flutterLocalNotificationsPlugin
         .resolvePlatformSpecificImplementation<
-        AndroidFlutterLocalNotificationsPlugin>()
+            AndroidFlutterLocalNotificationsPlugin>()
         ?.startForegroundService(1, packageInfo!.appName, '正在运行...',
-        notificationDetails: androidPlatformChannelSpecifics, payload: '');
+            notificationDetails: androidPlatformChannelSpecifics, payload: '');
   }
   //
   // Future<void> _stopForegroundService() async {

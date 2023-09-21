@@ -7,9 +7,9 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:sprintf/sprintf.dart';
-import 'package:kaibo/models/upgrade_info.dart';
-import 'package:kaibo/resources/lang.dart';
-import 'package:kaibo/resources/styles.dart';
+import 'package:mini_store/models/upgrade_info.dart';
+import 'package:mini_store/resources/lang.dart';
+import 'package:mini_store/resources/styles.dart';
 
 class UpgradeViewV2 extends StatefulWidget {
   final Function()? onLater;
@@ -180,23 +180,23 @@ class _UpgradeViewV2State extends State<UpgradeViewV2> {
   }
 
   Widget _buildButton({required String text, Function()? onTap}) => Ink(
-    height: 44.h,
-    child: InkWell(
-      onTap: onTap,
-      child: Container(
-        alignment: Alignment.center,
-        padding: EdgeInsets.symmetric(
-          // vertical: 10.h,
-          horizontal: 14.w,
-        ),
-        child: Text(
-          text,
-          style: TextStyle(
-            color: const Color(0xFF1B72EC),
-            fontSize: 16.sp,
+        height: 44.h,
+        child: InkWell(
+          onTap: onTap,
+          child: Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.symmetric(
+              // vertical: 10.h,
+              horizontal: 14.w,
+            ),
+            child: Text(
+              text,
+              style: TextStyle(
+                color: const Color(0xFF1B72EC),
+                fontSize: 16.sp,
+              ),
+            ),
           ),
         ),
-      ),
-    ),
-  );
+      );
 }

@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import 'package:kaibo/pages/splash/splash_binding.dart';
-import 'package:kaibo/pages/splash/splash_view.dart';
-import 'package:kaibo/pages/index/index_binding.dart';
-import 'package:kaibo/pages/index/index_view.dart';
+import 'package:mini_store/pages/splash/splash_binding.dart';
+import 'package:mini_store/pages/splash/splash_view.dart';
+import 'package:mini_store/pages/index/index_binding.dart';
+import 'package:mini_store/pages/index/index_view.dart';
 
 part 'app_routes.dart';
 

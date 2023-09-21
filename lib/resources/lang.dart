@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:get/get.dart';
 
-import 'package:kaibo/lang/en_us.dart';
-import 'package:kaibo/lang/zh_cn.dart';
+import 'package:mini_store/lang/en_us.dart';
+import 'package:mini_store/lang/zh_cn.dart';
 
 class TranslationService extends Translations {
   static Locale? get locale => Get.deviceLocale;
@@ -11,9 +11,9 @@ class TranslationService extends Translations {
 
   @override
   Map<String, Map<String, String>> get keys => {
-    'en_US': enUS,
-    'zh_CN': zhCN,
-  };
+        'en_US': enUS,
+        'zh_CN': zhCN,
+      };
 }
 
 class Globe {
@@ -36,5 +36,4 @@ class Globe {
   static String get upgradeIgnore => 'upgradeIgnore'.tr;
   static String get upgradeLater => 'upgradeLater'.tr;
   static String get upgradeNow => 'upgradeNow'.tr;
-
 }

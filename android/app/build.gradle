@@ -34,7 +34,7 @@ static def buildTime() {
 }
 
 android {
-    namespace "com.aptx4869.kaibo.kaibo"
+    namespace "com.aptx4869.mini_store"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
@@ -53,7 +53,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.aptx4869.kaibo.kaibo"
+        applicationId "com.aptx4869.mini_store"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion flutter.minSdkVersion
@@ -86,7 +86,7 @@ android {
     android.applicationVariants.all { variant ->
         variant.outputs.all {
             // 定义自定义的APK文件名，包括APP名称、版本代码和时间戳
-            outputFileName = "Kaibo_${variant.versionName}(${variant.versionCode})_${variant.buildType.name}_${buildTime()}.apk"
+            outputFileName = "mini_store_${variant.versionName}(${variant.versionCode})_${variant.buildType.name}_${buildTime()}.apk"
         }
     }
 

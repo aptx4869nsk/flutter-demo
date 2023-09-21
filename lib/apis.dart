@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
-import 'package:kaibo/utils/data_sp.dart';
-import 'package:kaibo/utils/http_util.dart';
-import 'package:kaibo/models/upgrade_info.dart';
-import 'package:kaibo/utils/logger.dart';
+import 'package:mini_store/utils/data_sp.dart';
+import 'package:mini_store/utils/http_util.dart';
+import 'package:mini_store/models/upgrade_info.dart';
+import 'package:mini_store/utils/logger.dart';
 import 'urls.dart';
 
 class Apis {

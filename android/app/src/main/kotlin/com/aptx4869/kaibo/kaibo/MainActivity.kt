@@ -1,4 +1,4 @@
-package com.aptx4869.kaibo.kaibo
+package com.aptx4869.mini_store
 
 import io.flutter.embedding.android.FlutterActivity
 

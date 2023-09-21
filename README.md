@@ -1,4 +1,4 @@
-# kaibo
+# mini_store
 
 Flutter 安卓/苹果/网页 项目
 

@@ -6,12 +6,12 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:kaibo/apis.dart';
-import 'package:kaibo/views/upgrade_view.dart';
-import 'package:kaibo/views/loading_view.dart';
-import 'package:kaibo/models/upgrade_info.dart';
-import 'package:kaibo/resources/lang.dart';
-import 'package:kaibo/widgets/app_widget.dart';
+import 'package:mini_store/apis.dart';
+import 'package:mini_store/views/upgrade_view.dart';
+import 'package:mini_store/views/loading_view.dart';
+import 'package:mini_store/models/upgrade_info.dart';
+import 'package:mini_store/resources/lang.dart';
+import 'package:mini_store/widgets/app_widget.dart';
 import 'data_sp.dart';
 import 'permissions.dart';
 import 'http_util.dart';
@@ -62,7 +62,8 @@ mixin class UpgradeManger {
             }
           },
         ).catchError((s, t) {
-          notificationService.createNotification(100, 0, 0, Globe.downloadFailed);
+          notificationService.createNotification(
+              100, 0, 0, Globe.downloadFailed);
         });
       });
     } else {
@@ -126,17 +127,17 @@ mixin class UpgradeManger {
         packageInfo!.version,
         upgradeInfo!.buildVersion!,
       ) <
-          0;
+      0;
 }
 
 class NotificationService {
   // Handle displaying of notifications.
   static final NotificationService _notificationService =
-  NotificationService._internal();
+      NotificationService._internal();
   final FlutterLocalNotificationsPlugin _flutterLocalNotificationsPlugin =
-  FlutterLocalNotificationsPlugin();
+      FlutterLocalNotificationsPlugin();
   final AndroidInitializationSettings _androidInitializationSettings =
-  const AndroidInitializationSettings('@mipmap/ic_launcher');
+      const AndroidInitializationSettings('@mipmap/ic_launcher');
 
   factory NotificationService() {
     return _notificationService;
@@ -148,7 +149,7 @@ class NotificationService {
 
   void init() async {
     final InitializationSettings initializationSettings =
-    InitializationSettings(
+        InitializationSettings(
       android: _androidInitializationSettings,
     );
     await _flutterLocalNotificationsPlugin.initialize(initializationSettings);
@@ -167,7 +168,7 @@ class NotificationService {
         maxProgress: count,
         progress: i);
     var platformChannelSpecifics =
-    NotificationDetails(android: androidPlatformChannelSpecifics);
+        NotificationDetails(android: androidPlatformChannelSpecifics);
     _flutterLocalNotificationsPlugin
         .show(id, status, '$i%', platformChannelSpecifics, payload: 'item x');
   }

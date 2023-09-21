@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
-import 'package:kaibo/resources/styles.dart';
+import 'package:mini_store/resources/styles.dart';
 
 class LoadingView {
   static final LoadingView singleton = LoadingView._();

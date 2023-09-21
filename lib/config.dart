@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:kaibo/utils/data_sp.dart';
-import 'package:kaibo/utils/http_util.dart';
-import 'package:kaibo/utils/logger.dart';
+import 'package:mini_store/utils/data_sp.dart';
+import 'package:mini_store/utils/http_util.dart';
+import 'package:mini_store/utils/logger.dart';
 
 class Config {
   //初始化全局信息
@@ -34,7 +34,6 @@ class Config {
       statusBarBrightness: brightness,
       statusBarIconBrightness: brightness,
     ));
-
   }
 
   static late String cachePath;
@@ -47,7 +46,7 @@ class Config {
   // 测试服
   // http://api.lkjh6.com
   static const _host = "api.blocxpro.com";
-  static const _port ="";
+  static const _port = "";
 
   static const _ipRegex =
       '((2[0-4]\\d|25[0-5]|[01]?\\d\\d?)\\.){3}(2[0-4]\\d|25[0-5]|[01]?\\d\\d?)';
@@ -60,7 +59,7 @@ class Config {
   /// initialize Server
   static void initializeServer() async {
     final response = await dio.get('$baseUrl/base-url.json');
-    if(response.statusCode == 200) {
+    if (response.statusCode == 200) {
       await DataSp.putServerConfig(response.data);
     } else {
       var data = {
@@ -81,12 +80,11 @@ class Config {
     return ip ?? _host;
   }
 
-
   /// App Api API
   static String get appApiUrl {
     String? url;
     var server = DataSp.getServerConfig();
-    if(server != null) {
+    if (server != null) {
       url = "${server['baseUrl']}/api";
       Logger.print('缓存apiUrl: $url');
     }

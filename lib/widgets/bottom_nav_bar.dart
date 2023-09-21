@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:kaibo/resources/styles.dart';
-import 'package:kaibo/utils/custom_ext.dart';
-import 'package:kaibo/views/badge_view.dart';
+import 'package:mini_store/resources/styles.dart';
+import 'package:mini_store/utils/custom_ext.dart';
+import 'package:mini_store/views/badge_view.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({

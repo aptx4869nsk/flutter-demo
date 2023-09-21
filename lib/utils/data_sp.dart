@@ -1,5 +1,5 @@
 import 'sp_util.dart';
-import 'package:kaibo/models/login_certificate.dart';
+import 'package:mini_store/models/login_certificate.dart';
 
 class DataSp {
   static const _loginCertificate = 'loginCertificate';

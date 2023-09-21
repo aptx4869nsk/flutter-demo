@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import 'package:kaibo/resources/images.dart';
-import 'package:kaibo/resources/lang.dart';
-import 'package:kaibo/resources/styles.dart';
+import 'package:mini_store/resources/images.dart';
+import 'package:mini_store/resources/lang.dart';
+import 'package:mini_store/resources/styles.dart';
 
 import 'splash_logic.dart';
 
@@ -39,9 +39,9 @@ class SplashPage extends StatelessWidget {
                   child: Text(
                     Globe.welcome,
                     style: TextStyle(
-                        fontSize: 17.sp,
-                        fontWeight: FontWeight.bold,
-                        color: Styles.theme,
+                      fontSize: 17.sp,
+                      fontWeight: FontWeight.bold,
+                      color: Styles.theme,
                     ),
                   ),
                 ),

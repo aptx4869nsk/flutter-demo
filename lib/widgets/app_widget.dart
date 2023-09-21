@@ -3,8 +3,8 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:kaibo/utils/enums.dart';
-import 'package:kaibo/resources/styles.dart';
+import 'package:mini_store/utils/enums.dart';
+import 'package:mini_store/resources/styles.dart';
 
 class AppWidget {
   static void showToast(String? msg) {
@@ -34,8 +34,8 @@ class AppWidget {
         return '网络异常，请求断开'; // return '未知响应';
       case DioExceptionType.cancel:
         return '取消服务器请求';
-    // case DioExceptionType.other:
-    //   return '网络异常'; // return '未知异常出错';
+      // case DioExceptionType.other:
+      //   return '网络异常'; // return '未知异常出错';
       default:
         return '请求失败';
     }

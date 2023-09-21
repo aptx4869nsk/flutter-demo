@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:kaibo/utils/logger.dart';
+import 'package:mini_store/utils/logger.dart';
 import 'config.dart';
 import 'app.dart';
 
@@ -20,7 +20,7 @@ Future<void> main() async {
   runZonedGuarded(
     () {
       WidgetsFlutterBinding.ensureInitialized();
-      Config.init(() => runApp(const KaiboApp()));
+      Config.init(() => runApp(const mini_storeApp()));
     },
     (Object error, StackTrace stackTrace) {
       Logger.print("Error FROM OUT_SIDE FRAMEWORK ");

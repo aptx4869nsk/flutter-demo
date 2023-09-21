@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:kaibo/resources/styles.dart';
+import 'package:mini_store/resources/styles.dart';
 
 class BadgeView extends StatelessWidget {
   const BadgeView({
@@ -29,34 +29,34 @@ class BadgeView extends StatelessWidget {
   }
 
   Text get _text => Text(
-    '${count > 99 ? '99+' : count}',
-    style: TextStyle(
-      fontSize: 8.sp,
-      color: const Color(0xFFFFFFFF),
-    ),
-    textAlign: TextAlign.center,
-  );
+        '${count > 99 ? '99+' : count}',
+        style: TextStyle(
+          fontSize: 8.sp,
+          color: const Color(0xFFFFFFFF),
+        ),
+        textAlign: TextAlign.center,
+      );
 
   Decoration get _decoration => BoxDecoration(
-    color: Styles.c_FF381F,
-    shape: count > 99 ? BoxShape.rectangle : BoxShape.circle,
-    borderRadius: count > 99 ? BorderRadius.circular(10.r) : null,
-    boxShadow: [
-      BoxShadow(
-        color: const Color(0x26C61B4A),
-        offset: Offset(1.15.w, 1.15.h),
-        blurRadius: 57.58.r,
-      ),
-      BoxShadow(
-        color: const Color(0x1AC61B4A),
-        offset: Offset(2.3.w, 2.3.h),
-        blurRadius: 11.52.r,
-      ),
-      BoxShadow(
-        color: const Color(0x0DC61B4A),
-        offset: Offset(4.61.w, 4.61.h),
-        blurRadius: 17.28.r,
-      ),
-    ],
-  );
+        color: Styles.c_FF381F,
+        shape: count > 99 ? BoxShape.rectangle : BoxShape.circle,
+        borderRadius: count > 99 ? BorderRadius.circular(10.r) : null,
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0x26C61B4A),
+            offset: Offset(1.15.w, 1.15.h),
+            blurRadius: 57.58.r,
+          ),
+          BoxShadow(
+            color: const Color(0x1AC61B4A),
+            offset: Offset(2.3.w, 2.3.h),
+            blurRadius: 11.52.r,
+          ),
+          BoxShadow(
+            color: const Color(0x0DC61B4A),
+            offset: Offset(4.61.w, 4.61.h),
+            blurRadius: 17.28.r,
+          ),
+        ],
+      );
 }

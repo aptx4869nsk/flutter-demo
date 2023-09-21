@@ -1,5 +1,5 @@
 const Map<String, String> enUS = {
-  "welcome": "Welcome to Kaibo",
+  "welcome": "Welcome to mini_store",
 // bottom-nav-bar
   "home": "Home",
   "mine": "Mine",

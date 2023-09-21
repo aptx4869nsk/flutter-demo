@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:kaibo/widgets/app_widget.dart';
-import 'package:kaibo/resources/lang.dart';
+import 'package:mini_store/widgets/app_widget.dart';
+import 'package:mini_store/resources/lang.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -130,8 +130,9 @@ class AppUtils {
     return isZh ? 'MM月dd日 HH时mm分' : 'MM/dd HH:mm';
   }
 
-  static TextInputFormatter getPasswordFormatter() => FilteringTextInputFormatter.allow(
-    // RegExp(r'[a-zA-Z0-9]'),
-    RegExp(r'[a-zA-Z0-9@#$%^&+=!.]'),
-  );
+  static TextInputFormatter getPasswordFormatter() =>
+      FilteringTextInputFormatter.allow(
+        // RegExp(r'[a-zA-Z0-9]'),
+        RegExp(r'[a-zA-Z0-9@#$%^&+=!.]'),
+      );
 }

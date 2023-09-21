@@ -1,4 +1,4 @@
-import 'package:kaibo/utils/enums.dart';
+import 'package:mini_store/utils/enums.dart';
 
 class ApiResp implements Exception {
   String? status;
@@ -26,5 +26,4 @@ class ApiResp implements Exception {
         errors = map["errors"],
         success = map["success"],
         type = map['type'];
-
 }
