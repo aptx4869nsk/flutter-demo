@@ -1,13 +1,16 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:kaibo/utils/app_utils.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:kaibo/resources/styles.dart';
+
 // import 'package:lottie/lottie.dart';
 import 'package:rxdart/rxdart.dart';
 
 extension SubjectExt<T> on Subject<T> {
   T addSafely(T data) {
     if (!isClosed) sink.add(data);
-    // if (!isClosed) add(data);
     return data;
   }
 }
@@ -39,9 +42,9 @@ extension StrExt on String {
     return TextView(data: this);
   }
 
-  // LottieView get toLottie {
-  //   return LottieView(name: this);
-  // }
+// LottieView get toLottie {
+//   return LottieView(name: this);
+// }
 }
 
 // ignore: must_be_immutable
@@ -92,17 +95,17 @@ class TextView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => GestureDetector(
-    onTap: onTap,
-    behavior: HitTestBehavior.translucent,
-    child: Text(
-      data,
-      style: style,
-      textAlign: textAlign,
-      overflow: overflow,
-      textScaleFactor: textScaleFactor,
-      maxLines: maxLines,
-    ),
-  );
+        onTap: onTap,
+        behavior: HitTestBehavior.translucent,
+        child: Text(
+          data,
+          style: style,
+          textAlign: textAlign,
+          overflow: overflow,
+          textScaleFactor: textScaleFactor,
+          maxLines: maxLines,
+        ),
+      );
 }
 
 // ignore: must_be_immutable
@@ -110,6 +113,7 @@ class ImageView extends StatelessWidget {
   ImageView({
     Key? key,
     required this.name,
+    this.label,
     this.width,
     this.height,
     this.color,
@@ -118,7 +122,8 @@ class ImageView extends StatelessWidget {
     this.onTap,
     this.onDoubleTap,
   }) : super(key: key);
-  final String name;
+  late final String name;
+  String? label;
   double? width;
   double? height;
   Color? color;
@@ -129,18 +134,36 @@ class ImageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => GestureDetector(
-    behavior: HitTestBehavior.translucent,
-    onTap: onTap,
-    onDoubleTap: onDoubleTap,
-    child: Opacity(
-      opacity: opacity,
-      child: Image.asset(
-        name,
-        width: width,
-        height: height,
-        color: color,
-        fit: fit,
-      ),
-    ),
-  );
+        behavior: HitTestBehavior.translucent,
+        onTap: onTap,
+        onDoubleTap: onDoubleTap,
+        child: Opacity(
+          opacity: opacity,
+          child: AppUtils.isNullValue(label)
+              ? Image.asset(
+                  name,
+                  width: width,
+                  height: height,
+                  color: color,
+                  fit: fit,
+                )
+              : Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    name,
+                    width: width,
+                    height: height,
+                    color: color,
+                    fit: fit,
+                  ),
+                  3.horizontalSpace,
+                  Text(
+                    label!,
+                    style: Styles.tsDefaultTxtClr14sp,
+                  ),
+                ],
+              ),
+        ),
+      );
 }

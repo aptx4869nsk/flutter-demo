@@ -4,7 +4,7 @@ import 'dart:developer';
 class Logger {
   // Sample of abstract logging function
   static void print(dynamic text, {bool isError = false}) {
-    log('** $text, isError [$isError]', name: 'OpenIM-App');
+    log('** $text, isError [$isError]', name: '凯博-App');
   }
 }
 

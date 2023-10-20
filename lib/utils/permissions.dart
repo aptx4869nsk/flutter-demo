@@ -35,6 +35,30 @@ class Permissions {
     }
   }
 
+  static void manageExternalStorage(Function()? onGranted) async {
+    if (await Permission.manageExternalStorage.request().isGranted) {
+      // Either the permission was already granted before or the user just granted it.
+      onGranted?.call();
+    }
+    if (await Permission.manageExternalStorage.isPermanentlyDenied) {
+      // The user opted to never again see the permission request dialog for this
+      // app. The only way to change the permission's status now is to let the
+      // user manually enable it in the system settings.
+    }
+  }
+
+  static void requestInstallPackages(Function()? onGranted) async {
+    if (await Permission.requestInstallPackages.request().isGranted) {
+      // Either the permission was already granted before or the user just granted it.
+      onGranted?.call();
+    }
+    if (await Permission.requestInstallPackages.isPermanentlyDenied) {
+      // The user opted to never again see the permission request dialog for this
+      // app. The only way to change the permission's status now is to let the
+      // user manually enable it in the system settings.
+    }
+  }
+
   static void microphone(Function()? onGranted) async {
     if (await Permission.microphone.request().isGranted) {
       // Either the permission was already granted before or the user just granted it.

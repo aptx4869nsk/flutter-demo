@@ -106,22 +106,28 @@ class _UpgradeViewV2State extends State<UpgradeViewV2> {
               SizedBox(
                 height: 10.h,
               ),
-              Text(
-                Globe.upgradeDescription,
-                style: TextStyle(
-                  color: const Color(0xFF333333),
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.bold,
+              Visibility(
+                visible: false,
+                child: Text(
+                  Globe.upgradeDescription,
+                  style: TextStyle(
+                    color: const Color(0xFF333333),
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               SizedBox(
                 height: 4.h,
               ),
-              Text(
-                widget.upgradeInfo.buildUpdateDescription ?? '',
-                style: TextStyle(
-                  fontSize: 14.sp,
-                  color: const Color(0xFF333333),
+              Visibility(
+                visible: false,
+                child: Text(
+                  widget.upgradeInfo.buildUpdateDescription ?? '',
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    color: const Color(0xFF333333),
+                  ),
                 ),
               ),
               SizedBox(
@@ -135,9 +141,12 @@ class _UpgradeViewV2State extends State<UpgradeViewV2> {
                       text: Globe.upgradeIgnore,
                       onTap: widget.onIgnore ?? () => Get.back(),
                     ),
-                    _buildButton(
-                      text: Globe.upgradeLater,
-                      onTap: widget.onLater ?? () => Get.back(),
+                    Visibility(
+                      visible: false,
+                      child: _buildButton(
+                        text: Globe.upgradeLater,
+                        onTap: widget.onLater ?? () => Get.back(),
+                      ),
                     ),
                     _buildButton(
                       text: Globe.upgradeNow,

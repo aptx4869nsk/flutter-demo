@@ -32,16 +32,19 @@ class SplashPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                top: 673.h,
-                width: 375.w,
-                child: Center(
-                  child: Text(
-                    Globe.welcome,
-                    style: TextStyle(
-                        fontSize: 17.sp,
-                        fontWeight: FontWeight.bold,
-                        color: Styles.theme,
+              Visibility(
+                visible: false,
+                child: Positioned(
+                  top: 673.h,
+                  width: 375.w,
+                  child: Center(
+                    child: Text(
+                      Globe.welcome,
+                      style: TextStyle(
+                          fontSize: 17.sp,
+                          fontWeight: FontWeight.bold,
+                          color: Styles.theme,
+                      ),
                     ),
                   ),
                 ),

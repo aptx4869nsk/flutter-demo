@@ -25,8 +25,7 @@ class SplashLogic extends GetxController with GetSingleTickerProviderStateMixin{
     animation.addListener(() => update());
     animation.addStatusListener((AnimationStatus status) {
       if (status == AnimationStatus.completed) {
-        var loginCertificate = DataSp.getLoginCertificate();
-        if(loginCertificate != null && loginCertificate.token.isNotEmpty) {
+        if(token != null) {
           AppNavigator.startMain();
         } else {
           AppNavigator.startLogin();

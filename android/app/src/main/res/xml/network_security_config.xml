@@ -2,6 +2,9 @@
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
         <!--        <domain includeSubdomains="true">www.sample-videos.com</domain>-->
-        <domain includeSubdomains="true">103.246.113.58</domain>
+<!--        <domain includeSubdomains="true">103.244.3.14</domain>-->
+        <domain includeSubdomains="true">api.hb6565.com</domain>
+        <domain includeSubdomains="true">api.hb727.com</domain>
+        <domain includeSubdomains="true">api.hb728.com</domain>
     </domain-config>
 </network-security-config>

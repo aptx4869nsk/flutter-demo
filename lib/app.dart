@@ -42,7 +42,7 @@ class KaiboApp extends StatelessWidget {
           ],
           getPages: AppPages.routes,
           initialBinding: InitBinding(),
-          initialRoute: AppRoutes.home,
+          initialRoute: AppRoutes.splash,
         ),
       ),
     );

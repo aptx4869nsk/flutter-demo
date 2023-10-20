@@ -25,6 +25,10 @@ class DataSp {
         .getObj(_loginCertificate, (v) => LoginCertificate.fromJson(v.cast()));
   }
 
+  static Future<bool>? removeLoginCertificate() {
+    return SpUtil().remove(_loginCertificate);
+  }
+
   /// {
   ///   "phone"    :"",
   ///   "areaCode" :"",
